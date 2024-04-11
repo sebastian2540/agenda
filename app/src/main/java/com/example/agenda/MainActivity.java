@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnCrear.findViewById(R.id.btnCrear);
 
         btnCrear=findViewById(R.id.btnCrear);
         btnCrear.setOnClickListener(new View.OnClickListener() {
@@ -28,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 if(db!=null){
                     Toast.makeText(MainActivity.this,"BASE DE DATOS CREADA", Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(MainActivity.this,"ERROR AL CREAR BASE DE DATOS", Toast.LENGTH_LONG).show();
+                }else {
+                    Toast.makeText(MainActivity.this,"ERROR AL CREAR LA BASE DE DATOS", Toast.LENGTH_LONG).show();
                 }
             }
         });
